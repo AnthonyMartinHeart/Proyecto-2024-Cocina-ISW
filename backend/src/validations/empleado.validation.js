@@ -27,6 +27,17 @@ export const EmployeeBodyValidation = Joi.object({
     "string.base": "El cargo debe ser un texto.",
     "string.max": "El cargo no debe exceder los 50 caracteres.",
   }),
+  fechaIngreso: Joi.date().required().messages({
+    "date.base": "La fecha de ingreso debe ser una fecha válida.",
+    "any.required": "La fecha de ingreso es obligatoria.",
+  }),
+  horarioTrabajo: Joi.string().required().messages({
+    "string.base": "El horario de trabajo debe ser un texto válido (por ejemplo, 09:00-17:00).",
+    "any.required": "El horario de trabajo es obligatorio.",
+  }),
+  estado: Joi.string().valid("activo", "inactivo").default("activo").messages({
+    "string.base": "El estado debe ser 'activo' o 'inactivo'.",
+  }),
   password: Joi.string().min(6).required().messages({
     "string.base": "La contraseña debe ser un texto.",
     "string.min": "La contraseña debe tener al menos 6 caracteres.",
@@ -42,3 +53,4 @@ export const EmployeeQueryValidation = Joi.object({
     "any.required": "El ID es obligatorio.",
   }),
 });
+
