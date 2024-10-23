@@ -1,69 +1,74 @@
-import EmpleadoSchema from "../entity/empleado.entity.js"; 
-import { AppDataSource } from "../config/configDb.js"; 
+"use strict";
+import EmpleadoSchema from "../entity/empleado.entity.js";
+import { AppDataSource } from "../config/configDb.js";
 
 
 // Crear empleado
 export async function createEmployeesService(data) {
   try {
-    const employeeRepository = AppDataSource.getRepository(EmpleadoSchema); // Obtener el repositorio
-    const newEmployee = employeeRepository.create(data); // Crear la entidad
-    const savedEmployee = await employeeRepository.save(newEmployee); // Guardar en la base de datos
+    const employeeRepository = AppDataSource.getRepository(EmpleadoSchema);
+    const newEmployee = employeeRepository.create(data);
+    const savedEmployee = await employeeRepository.save(newEmployee);
     return [savedEmployee, null];
   } catch (error) {
-    return [null, error.message]; // Devolver error
+    return [null, error.message];
   }
 }
 
 // Obtener todos los empleados
 export async function getEmployeesService() {
   try {
-    const employeeRepository = AppDataSource.getRepository(EmpleadoSchema); // Obtener el repositorio
-    const employees = await employeeRepository.find(); // Obtener todos los empleados
+    const employeeRepository = AppDataSource.getRepository(EmpleadoSchema);
+    const employees = await employeeRepository.find();
     return [employees, null];
   } catch (error) {
-    return [null, error.message]; // Devolver error
+    return [null, error.message];
   }
 }
 
 // Obtener un solo empleado
 export async function getEmployeeService(id) {
   try {
-    const employeeRepository = AppDataSource.getRepository(EmpleadoSchema); // Obtener el repositorio
-    const employee = await employeeRepository.findOneBy({ id }); // Obtener un empleado por ID
-    if (!employee) return [null, "Empleado no encontrado"];
+    const employeeRepository = AppDataSource.getRepository(EmpleadoSchema);
+    const employee = await employeeRepository.findOne({ where: { id } });
     return [employee, null];
   } catch (error) {
-    return [null, error.message]; // Devolver error
+    return [null, error.message];
   }
 }
 
 // Actualizar empleado
 export async function updateEmployeeService(id, data) {
   try {
-    const employeeRepository = AppDataSource.getRepository(EmpleadoSchema); // Obtener el repositorio
-    const employee = await employeeRepository.findOneBy({ id }); // Buscar el empleado
-    if (!employee) return [null, "Empleado no encontrado"];
-
-    // Actualiza la información del empleado
-    Object.assign(employee, data); // Mezclar los datos del empleado
-
-    const updatedEmployee = await employeeRepository.save(employee); // Guardar los cambios
+    const employeeRepository = AppDataSource.getRepository(EmpleadoSchema);
+    await employeeRepository.update(id, data);
+    const updatedEmployee = await employeeRepository.findOne({ where: { id } });
     return [updatedEmployee, null];
   } catch (error) {
-    return [null, error.message]; // Devolver error
+    return [null, error.message];
   }
 }
 
 // Eliminar empleado
 export async function deleteEmployeeService(id) {
   try {
-    const employeeRepository = AppDataSource.getRepository(EmpleadoSchema); // Obtener el repositorio
-    const employee = await employeeRepository.findOneBy({ id }); // Buscar el empleado
-    if (!employee) return [null, "Empleado no encontrado"];
-
-    await employeeRepository.remove(employee); // Eliminar el empleado
-    return [employee, null];
+    const employeeRepository = AppDataSource.getRepository(EmpleadoSchema);
+    const result = await employeeRepository.delete(id);
+    return [result, null];
   } catch (error) {
-    return [null, error.message]; // Devolver error
+    return [null, error.message];
+  }
+}
+
+// Obtener asistencia diaria
+export async function getAttendanceService(date) {
+  try {
+    const employeeRepository = AppDataSource.getRepository(EmpleadoSchema);
+    const attendanceList = await employeeRepository.find({
+      where: { horarioTrabajo: date }, // Ajustar la lógica de la fecha
+    });
+    return [attendanceList, null];
+  } catch (error) {
+    return [null, error.message];
   }
 }
