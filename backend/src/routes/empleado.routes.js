@@ -1,12 +1,14 @@
 import express from "express";
+import { authenticateJwt } from "../middlewares/authentication.middleware.js"; 
 import {
   createEmployees,
   getEmployee,
   getEmployees,
   updateEmployee,
   deleteEmployee,
+  getAttendance,
 } from "../controllers/empleado.controller.js";
-import { authenticateJwt } from "../middlewares/authentication.encargado.js"; 
+
 
 const router = express.Router();
 
@@ -24,5 +26,8 @@ router.put("/update/:id",  authenticateJwt , updateEmployee);
 
 // Ruta para eliminar un empleado por ID
 router.delete("/delete/:id",  authenticateJwt , deleteEmployee);
+
+// Ruta para consultar la asistencia diaria
+router.get("/attendance", authenticateJwt, getAttendance);
 
 export default router;
