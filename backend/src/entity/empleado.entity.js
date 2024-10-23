@@ -2,7 +2,7 @@
 import { EntitySchema } from "typeorm";
 
 const EmpleadoSchema = new EntitySchema({
-  name: "Employe",
+  name: "Employee",
   tableName: "Employees",
   columns: {
     id: {
@@ -36,11 +36,28 @@ const EmpleadoSchema = new EntitySchema({
       type: "varchar",
       length: 50,
       nullable: false,
-      default: "desconocido", // Valor por defecto para evitar valores null
+      default: "desconocido",
     },
     password: {
       type: "varchar",
       nullable: false,
+    },
+    fechaIngreso: {
+      type: "date",
+      nullable: false,
+      default: () => "CURRENT_DATE", // Valor predeterminado para evitar NULL
+    },
+    horarioTrabajo: {
+      type: "varchar",
+      length: 100, // Ejemplo: "09:00-17:00"
+      nullable: false,
+      default: "09:00-17:00", // Valor predeterminado para evitar NULL
+    },
+    estado: {
+      type: "varchar",
+      length: 10,
+      nullable: false,
+      default: "activo", // "activo" o "inactivo"
     },
     createdAt: {
       type: "timestamp with time zone",
