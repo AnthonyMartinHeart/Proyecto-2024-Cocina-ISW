@@ -13,10 +13,10 @@ const router = Router();
 router
     .use("/auth", authRoutes)
     .use("/user", userRoutes)
-    .use("/empleados", empleadoRoutes) // Rutas de Valter Lineros
-    .use("/orders", orderRoutes) // Rutas de Fernando Flores
-    .use("/menu", menuRoutes)
-    .use("/batches", batchRoutes) // Rutas de lotes
-    .use("/batchesItems", batchItemRoutes); // Rutas de ítems
+    .use("/empleados", empleadoRoutes) // Rutas de Jorge Martinez
+    .use("/orders", orderRoutes) // Rutas de Valter Lineros
+    .use("/menu", menuRoutes) //Ruta de Fernando Flores
+    .use("/batches", batchRoutes) // Rutas de lotes Benjamin
+    .use("/batchesItems", batchItemRoutes); // Rutas de ítems Benjamin
 
 export default router;
