@@ -1,14 +1,14 @@
 .table-container .tabulator .tabulator-col {
-    background-color: #003366;
-    color: #fff;
+    background-color: #212121; /* Eerie black */
+    color: #FFEBEE; /* Lavender blush */
 }
 .tabulator .tabulator-footer .tabulator-page {
-    background-color: #fff;
-    color: black;
-    border: 1px solid #003366;
+    background-color: #FFEBEE; /* Lavender blush */
+    color: #212121; /* Eerie black */
+    border: 1px solid #FF5722; /* Giants orange */
     padding: 4px 8px;
     border-radius: 4px;
 }
 .tabulator .tabulator-footer .tabulator-page.active {
-    color: #E4332C;
+    color: #FFC107; /* Amber */
 }
