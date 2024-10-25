@@ -1,5 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap");
-@import url("animations.css");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Poppins:wght@400;500;700&display=swap");
+
 html,
 body {
 	margin: 0;
@@ -9,10 +9,19 @@ body {
 	min-width: 100%;
 	min-height: 100vh;
 	overflow-x: hidden;
-	font-family: "Montserrat", sans-serif;
+	font-family: "Montserrat", sans-serif; /* Fuente principal Montserrat */
 }
+
 #root {
 	min-width: 100%;
 	min-height: 100vh;
 	margin: 0 auto;
+}
+
+h1, h2, h3 {
+	font-family: "Poppins", sans-serif; /* Encabezados con Poppins */
+}
+
+p, span, a {
+	font-family: "Montserrat", sans-serif; /* Textos y enlaces con Montserrat */
 }
