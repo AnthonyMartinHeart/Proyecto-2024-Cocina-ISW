@@ -13,9 +13,10 @@ const router = Router();
 router
     .use("/auth", authRoutes)
     .use("/user", userRoutes)
-    //.use("/empleados", empleadoRoutes) // Rutas de Valter Lineros
-    //.use("/orders", orderRoutes) // Rutas de Fernando Flores
-    //.use("/menu", menuRoutes);
+    .use("/empleados", empleadoRoutes) // Rutas de Valter Lineros
+    .use("/orders", orderRoutes) // Rutas de Fernando Flores
+    .use("/menu", menuRoutes)
     .use("/batches", batchRoutes) // Rutas de lotes
     .use("/batchesItems", batchItemRoutes); // Rutas de ítems
+
 export default router;
