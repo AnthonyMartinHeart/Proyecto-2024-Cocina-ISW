@@ -4,12 +4,12 @@
 	top: 0;
 	left: 0;
 	display: block;
-	background-color: #003366; /*Color de la navbar*/
+	background-color: #212121; /* Eerie black */
 	height: 9vh;
 	z-index: 1000;
 	ul {
 		display: flex;
-		justify-content:end;
+		justify-content: end;
 		align-items: center;
 		padding: 0 5vw;
 		margin: 0;
@@ -21,7 +21,7 @@
 			position: relative;
 			height: 100%;
 			a {
-				color: white;
+				color: #FFEBEE; /* Lavender blush */
 				font-size: 0.9em;
 				text-decoration: none;
 				position: relative;
@@ -37,7 +37,7 @@
 				left: 0;
 				width: 100%;
 				height: 3px;
-				background-color: #006edf;
+				background-color: #FF5722; /* Giants orange */
 				transform: scaleX(0);
 				transform-origin: bottom;
 				transition: transform 0.3s ease;
@@ -48,8 +48,8 @@
 			}
 			.active {
 				font-weight: bold;
-				background-color: #eef7ff;
-				color: #002651;
+				background-color: #FFEBEE; /* Lavender blush */
+				color: #212121; /* Eerie black */
 				margin: 0;
 				padding-bottom: 0;
 				border: 0;
@@ -73,7 +73,7 @@
 .hamburger .bar {
 	width: 25px;
 	height: 3px;
-	background-color: white;
+	background-color: #FFEBEE; /* Lavender blush */
 	margin: 4px 0;
 }
 
@@ -81,7 +81,7 @@
 	.nav-menu ul {
 		display: none;
 		flex-direction: column;
-		background-color: #003366;
+		background-color: #212121; /* Eerie black */
 		position: absolute;
 		top: 9vh;
 		left: 0;
@@ -91,7 +91,7 @@
 
 	.nav-menu.activado ul {
 		display: flex;
-		background-color: #eef7ff;
+		background-color: #FFEBEE; /* Lavender blush */
 		justify-content: center;
 		padding: 0;
 	}
@@ -105,7 +105,7 @@
 		width: 100%;
 		height: 60px;
 		a {
-			color: #003366;
+			color: #FF5722; /* Giants orange */
 			font-weight: bold;
 			font-size: 0.9em;
 			text-decoration: none;
@@ -122,7 +122,7 @@
 	.nav-menu ul {
 		display: none;
 		flex-direction: column;
-		background-color: #003366;
+		background-color: #212121; /* Eerie black */
 		position: absolute;
 		top: 9vh;
 		left: 0;
@@ -131,7 +131,7 @@
 	}
 	.nav-menu.activado ul {
 		display: flex;
-		background-color: #eef7ff;
+		background-color: #FFEBEE; /* Lavender blush */
 		justify-content: center;
 		padding: 0;
 	}
@@ -145,7 +145,7 @@
 		width: 100%;
 		height: 60px;
 		a {
-			color: #003366;
+			color: #FF5722; /* Giants orange */
 			font-weight: bold;
 			font-size: 0.9em;
 			text-decoration: none;
