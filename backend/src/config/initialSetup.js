@@ -13,8 +13,8 @@ async function createUsers() {
     await Promise.all([
       userRepository.save(
         userRepository.create({
-          nombreCompleto: "Diego Alexis Salazar Jara",
-          rut: "21.308.770-3",
+          nombreCompleto: "Jorge Antonio Martinez Henriquez",
+          rut: "21.069.508-7",
           email: "administrador2024@gmail.cl",
           password: await encryptPassword("admin1234"),
           rol: "administrador",
@@ -22,8 +22,8 @@ async function createUsers() {
       ),
       userRepository.save(
         userRepository.create({
-          nombreCompleto: "Diego Sebastián Ampuero Belmar",
-          rut: "21.151.897-9",
+          nombreCompleto: "Fernando Alberto Flores Cruces",
+          rut: "20.940.422-2",
           email: "usuario1.2024@gmail.cl",
           password: await encryptPassword("user1234"),
           rol: "usuario",
@@ -31,8 +31,8 @@ async function createUsers() {
       ),
         userRepository.save(
           userRepository.create({
-            nombreCompleto: "Alexander Benjamín Marcelo Carrasco Fuentes",
-            rut: "20.630.735-8",
+            nombreCompleto: "Benjamín Antonio Manríquez Ramírez",
+            rut: "20.464.375-K",
             email: "usuario2.2024@gmail.cl",
             password: await encryptPassword("user1234"),
             rol: "usuario",
@@ -40,36 +40,9 @@ async function createUsers() {
       ),
       userRepository.save(
         userRepository.create({
-          nombreCompleto: "Pablo Andrés Castillo Fernández",
-          rut: "20.738.450-K",
+          nombreCompleto: "Valter Sergio Esau Lineros Zambrano",
+          rut: "20.487.531-6",
           email: "usuario3.2024@gmail.cl",
-          password: await encryptPassword("user1234"),
-          rol: "usuario",
-        }),
-      ),
-      userRepository.save(
-        userRepository.create({
-          nombreCompleto: "Felipe Andrés Henríquez Zapata",
-          rut: "20.976.635-3",
-          email: "usuario4.2024@gmail.cl",
-          password: await encryptPassword("user1234"),
-          rol: "usuario",
-        }),
-      ),
-      userRepository.save(
-        userRepository.create({
-          nombreCompleto: "Diego Alexis Meza Ortega",
-          rut: "21.172.447-1",
-          email: "usuario5.2024@gmail.cl",
-          password: await encryptPassword("user1234"),
-          rol: "usuario",
-        }),
-      ),
-      userRepository.save(
-        userRepository.create({
-          nombreCompleto: "Juan Pablo Rosas Martin",
-          rut: "20.738.415-1",
-          email: "usuario6.2024@gmail.cl",
           password: await encryptPassword("user1234"),
           rol: "usuario",
         }),
