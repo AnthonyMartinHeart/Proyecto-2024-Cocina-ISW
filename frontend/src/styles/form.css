@@ -34,16 +34,15 @@
     }
 }
 
-
 .form {
-	background-color: #eef7ff; /*Color del formulario*/
+	background-color: #FFEBEE; /* Lavender blush */
 	padding: 7vh;
 	display: flex;
 	flex-direction: column;
 	border-radius: 24px;
 	align-items: center;
 	h1 {
-		color: #003366; /*Color del titulo del formulario*/
+		color: #FF5722; /* Giants orange */
 		font-size: 30px;
 		font-weight: bold;
 		margin: 0;
@@ -54,46 +53,44 @@
 		display: flex;
 	}
 	label {
-		color: #003366; /*Color label de inputs del formulario*/
+		color: #795548; /* Coffee */
 		font-weight: bold;
 		margin-bottom: 0.7vh;
 	}
 	input {
 		display: flex;
-		border: 3px solid #003366; /*Color del borde de inputs del formulario*/
+		border: 3px solid #FF5722; /* Giants orange */
 		border-radius: 12px;
 		padding: 8px 5px;
 		background-repeat: no-repeat;
 		margin-bottom: 0.8vh;
-		background-color: #eef7ff;
+		background-color: #FFEBEE;
 		font-weight: regular;
 		font-size: 16px;
-		color: #003366;
-		border-radius: 12px;
+		color: #795548; /* Coffee */
 		background-position: right 10px center;
 		background-size: 25px 25px;
 		box-sizing: border-box;
 	}
 	input::placeholder {
-		color: rgba(0, 51, 102, 0.3);
+		color: rgba(121, 85, 72, 0.3); /* Coffee */
 		font-weight: light;
 	}
 	input:focus {
-		background-color: rgba(0, 110, 223, 0.14);
+		background-color: rgba(255, 87, 34, 0.14); /* Giants orange with opacity */
 		font-weight: regular;
 	}
 	select {
 		display: flex;
-		border: 3px solid #003366; /*Color del borde de selects del formulario*/
+		border: 3px solid #FF5722; /* Giants orange */
 		border-radius: 12px;
 		padding: 8px 5px;
 		background-repeat: no-repeat;
 		margin-bottom: 0.8vh;
-		background-color: #eef7ff;
+		background-color: #FFEBEE;
 		font-weight: regular;
 		font-size: 16px;
-		color: #003366;
-		border-radius: 12px;
+		color: #795548; /* Coffee */
 		background-position: right 30px center;
 		background-size: 25px 25px;
 		box-sizing: border-box;
@@ -105,35 +102,34 @@
 		appearance: none;
 	}
 	select::placeholder {
-		color: rgba(0, 51, 102, 0.3);
+		color: rgba(121, 85, 72, 0.3); /* Coffee */
 		font-weight: light;
 	}
 	select:focus {
-		background-color: rgba(0, 110, 223, 0.14);
+		background-color: rgba(255, 87, 34, 0.14); /* Giants orange with opacity */
 		font-weight: regular;
 	}
 	textarea {
 		display: flex;
-		border: 3px solid #003366; /*Color del borde de textareas del formulario*/
+		border: 3px solid #FF5722; /* Giants orange */
 		border-radius: 12px;
 		padding: 8px 5px;
 		background-repeat: no-repeat;
 		margin-bottom: 0.8vh;
-		background-color: #eef7ff;
+		background-color: #FFEBEE;
 		font-weight: regular;
 		font-size: 16px;
-		color: #003366;
-		border-radius: 12px;
+		color: #795548; /* Coffee */
 		background-position: right 10px center;
 		background-size: 25px 25px;
 		box-sizing: border-box;
 	}
 	textarea::placeholder {
-		color: rgba(0, 51, 102, 0.3);
+		color: rgba(121, 85, 72, 0.3); /* Coffee */
 		font-weight: light;
 	}
 	textarea:focus {
-		background-color: rgba(0, 110, 223, 0.14);
+		background-color: rgba(255, 87, 34, 0.14); /* Giants orange with opacity */
 		font-weight: regular;
 	}
 	button {
@@ -144,17 +140,17 @@
 		border-radius: 12px;
 		border: none;
 		width: 100%;
-		background-color: #003366; /*Color del boton del formulario*/
-		color: #eef7ff;
+		background-color: #FF5722; /* Giants orange */
+		color: #FFEBEE; /* Lavender blush */
 		font-weight: bold;
 		font-size: 16px;
-		border: 3px solid #003366; /*Color del borde del boton*/
+		border: 3px solid #FF5722; /* Giants orange */
 		margin-top: 10px;
 	}
-	button:hover{
-		border: 3px solid #003366;
-		background-color: #eef7ff;
-		color: #003366;
+	button:hover {
+		border: 3px solid #FF5722;
+		background-color: #FFEBEE; /* Lavender blush */
+		color: #FF5722; /* Giants orange */
 		transition: .3s ease-out;
 	}
 	div {
@@ -171,7 +167,7 @@
 .form .error-message {
     visibility: hidden;
     height: 20px;
-    color: red;
+    color: #E4332C; /* Red Salsa */
     font-size: 13px;
 	padding-left: 5px;
 }
@@ -181,7 +177,7 @@
 
 .container {
 	height: 100vh;	
-	background: linear-gradient(90deg, #003366, #001a33); /*Color principal para login (gradiente)*/
+	background: linear-gradient(90deg, #212121, #795548); /* Eerie black and Coffee */
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -201,7 +197,6 @@ input[name='nombreCompleto'] {
 
 input[name='rol'] {
 	background-image: url('../assets/PasskeyIcon.svg');
-	
 }
 
 .container_inputs {
@@ -228,7 +223,7 @@ input {
 	top: 10px;
 }
 
-.toggle-password-icon img{
+.toggle-password-icon img {
 	width: 25px;
 	height: 25px;
 	margin-top: 4px;
