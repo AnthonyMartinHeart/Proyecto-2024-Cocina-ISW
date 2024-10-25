@@ -3,21 +3,25 @@
   line-height: 1.5;
   font-weight: 400;
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  /* Cambié el color base a Coffee (#795548) */
+  color: #795548;
+  background-color: #212121; /* Cambié a Eerie black (#212121) */
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
 a {
   font-weight: 500;
-  color: #646cff;
+  color: #FF5722; /* Cambié a Giants orange (#FF5722) */
   text-decoration: inherit;
 }
+
 a:hover {
-  color: #535bf2;
+  color: #FFC107; /* Cambié a Amber (#FFC107) */
 }
+
 body {
   margin: 0;
   display: flex;
@@ -25,11 +29,15 @@ body {
   min-width: 320px;
   min-height: 100vh;
   overflow-x: hidden;
+  background-color: #212121; /* Eerie black (#212121) */
 }
+
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
+  color: #FFEBEE; /* Lavender blush (#FFEBEE) */
 }
+
 button {
   border-radius: 8px;
   border: 1px solid transparent;
@@ -37,26 +45,31 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: #795548; /* Coffee (#795548) */
   cursor: pointer;
   transition: border-color 0.25s;
 }
+
 button:hover {
-  border-color: #646cff;
+  border-color: #FF5722; /* Giants orange (#FF5722) */
 }
+
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
-    background-color: #ffffff;
+    background-color: #FFFFFF;
   }
+
   a:hover {
-    color: #747bff;
+    color: #FFC107; /* Amber (#FFC107) */
   }
+
   button {
-    background-color: #f9f9f9;
+    background-color: #FFEBEE; /* Lavender blush (#FFEBEE) */
   }
 }
