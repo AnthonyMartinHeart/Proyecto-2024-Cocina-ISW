@@ -5,7 +5,7 @@ import {
   deleteItemFromBatch,
   getAllItemsInBatches,
   getAllItemsInBatch
-} from "../controllers/batch.controller.js";
+} from "../controllers/itemBatch.controller.js";
 
 import { isAdmin  } from "../middlewares/authorization.middleware.js";
 import { authenticateJwt } from "../middlewares/authentication.middleware.js";
