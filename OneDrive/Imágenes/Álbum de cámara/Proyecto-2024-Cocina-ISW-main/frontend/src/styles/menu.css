@@ -1,0 +1,244 @@
+/* Estilos generales de la página de menú */
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    padding-top: 80px; /* Espacio para la navbar en la parte superior */
+}
+
+/* Mover el título más abajo */
+.title-table {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #FF5722;
+    margin: 50px 0 30px 0; /* Centrado vertical con márgenes superior e inferior */
+    text-align: center; /* Centrar el texto horizontalmente */
+    display: block; /* Asegura que el título sea un bloque que ocupe todo el ancho disponible */
+    width: 100%; /* Asegura que ocupe todo el ancho del contenedor */
+    text-align: center; /* Centrar el texto */
+}
+
+
+/* Estilos para la tabla de menú */
+.menu-table {
+    width: 80%; /* Limitar el ancho a un 80% del contenedor principal */
+    max-width: 800px; /* Establecer un ancho máximo para la tabla */
+    margin: 30px auto; /* Centrar la tabla en la página y añadir espacio arriba */
+    border-collapse: collapse;
+    max-height: 400px; /* Limitar la altura máxima de la tabla */
+    overflow-y: auto; /* Añadir desplazamiento vertical si el contenido excede el tamaño */
+}
+
+.menu-table th, .menu-table td {
+    padding: 10px;
+    border: 1px solid #FF5722;
+    text-align: left;
+}
+
+/* Estilo para las celdas vacías */
+.menu-table td:empty {
+    background-color: #FFE0B2 !important; /* Naranja claro */
+    height: 50px; /* Asegura una altura mínima uniforme */
+    text-align: center; /* Centra contenido vacío */
+    color: #FF5722; /* Color del texto vacío si es necesario */
+}
+
+/* Agregar un símbolo a celdas vacías */
+.menu-table td:empty::before {
+    content: '-'; /* Mostrar un guion en lugar de dejar vacío */
+    color: #FF5722;
+    font-weight: bold;
+}
+
+/* Estilo para encabezados */
+.menu-table th {
+    background-color: #FF5722;
+    color: white;
+}
+
+.menu-table tr:hover {
+    background-color: #ffcc80;
+}
+
+/* Estilos para el formulario de menú */
+.menu-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra el formulario verticalmente */
+    align-items: center; /* Centra los elementos horizontalmente */
+    gap: 20px; /* Espacio entre los campos */
+    width: 100%;
+    max-width: 500px;
+    margin-top: 30px;
+    padding: 20px;
+    border: 2px solid #FFC107; /* Borde amarillo */
+    border-radius: 8px;
+    background-color: #FF5722; /* Fondo naranja */
+    text-align: center; /* Centra el texto dentro del formulario */
+}
+
+/* Centrar etiquetas (labels) */
+.menu-form label {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #FFEBEE; /* Color del texto */
+    width: 100%; /* Asegura que el texto ocupe todo el ancho */
+}
+
+/* Estilos para inputs, selects y textarea */
+.menu-form input,
+.menu-form select,
+.menu-form textarea {
+    padding: 10px;
+    border: 1px solid #FFC107; /* Borde amarillo */
+    border-radius: 5px;
+    font-size: 1rem;
+    width: 80%; /* Ancho del campo de entrada (80% del contenedor del formulario) */
+    margin: 0 auto; /* Centrar el campo dentro del formulario */
+    color: black; /* Texto en color negro */
+    background-color: #FFE0B2; /* Fondo naranja claro */
+    display: block;
+}
+
+/* Estilo adicional para centrar los botones */
+.menu-form button {
+    background-color: #FF5722;
+    color: white;
+    padding: 12px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1rem;
+    width: 80%; /* Hacer que el botón ocupe el 80% del formulario */
+    margin: 0 auto; /* Centrar el botón */
+}
+
+.menu-form button:hover {
+    background-color: #FFC107;
+}
+
+/* Estilos para el modal de eliminación */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 400px;
+    text-align: center;
+}
+
+.modal-content button {
+    background-color: #FF5722;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.modal-content button:hover {
+    background-color: #FFC107;
+}
+
+button.cancel {
+    background-color: #607D8B;
+}
+
+button.cancel:hover {
+    background-color: #455A64;
+}
+
+/* Estilos para el contenedor de botones de acciones */
+.action-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+/* Estilos para el contenedor del navbar */
+.navbar {
+    background-color: #FF5722;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+/* Menú de navegación */
+.navbar .nav-menu ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar .nav-menu ul li {
+    padding: 10px;
+}
+
+.navbar .nav-menu ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.navbar .nav-menu ul li a.active {
+    color: #FFC107;
+}
+
+/* Estilos para el icono de hamburguesa */
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.hamburger .bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px 0;
+}
+
+@media (max-width: 768px) {
+    .navbar .nav-menu ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .nav-menu.activado {
+        display: flex;
+    }
+
+    .main-container {
+        padding-top: 120px; /* Para ajustar la altura superior en pantallas pequeñas */
+    }
+
+    .menu-form {
+        max-width: 90%; /* Ajustar el formulario para pantallas pequeñas */
+    }
+
+    .menu-table {
+        max-height: 300px; /* Limitar la altura de la tabla en pantallas pequeñas */
+    }
+}

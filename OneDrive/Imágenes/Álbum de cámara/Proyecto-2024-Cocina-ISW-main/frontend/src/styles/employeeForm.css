@@ -1,0 +1,212 @@
+/* Main container setup */
+.main-container {
+    display: flex;
+    flex-direction: column; /* Cambiado a column para que el contenedor principal sea flexible */
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    color: #FFEBEE; /* Lavender blush */
+}
+
+/* Estilo para la tabla de empleados */
+.employee-table {
+    width: 90%;
+    max-width: 1200px;
+    margin-top: 20px;
+    border-collapse: collapse;
+    background-color: #FFEBEE;
+}
+
+.employee-table th,
+.employee-table td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #FFC107;
+    color: #212121; /* Eerie black */
+}
+
+.employee-table th {
+    background-color: #FF5722; /* Giants orange */
+    color: #FFFFFF;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+}
+
+.employee-table td {
+    background-color: rgba(255, 235, 238, 0.8); /* Slightly opaque Lavender blush */
+}
+
+/* Estilo de los botones */
+button {
+    padding: 8px 15px;
+    margin: 5px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.add-button {
+    background-color: #FF5722;
+    color: #FFFFFF;
+}
+
+.edit-button {
+    background-color: #FFC107; /* Amber */
+    color: #212121;
+}
+
+.delete-button {
+    background-color: #d32f2f; /* Red */
+    color: #FFFFFF;
+}
+
+/* Estilo para el input de filtro de RUT */
+.rut-filter-container {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.rut-filter-input {
+    padding: 8px;
+    width: 180px; /* Ancho pequeño para el input */
+    border: 1px solid #FF5722; /* Borde naranja para el input de RUT */
+    border-radius: 5px;
+    color: #212121;
+    background-color: #FFCC80; /* Fondo naranja claro */
+    font-size: 0.9em;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+}
+
+.rut-filter-button {
+    padding: 8px 15px;
+    margin-left: 10px;
+    background-color: #FF5722; /* Color de fondo del botón */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.rut-filter-button:hover {
+    background-color: #e64a19; /* Naranja más oscuro en hover */
+}
+
+/* Estilo para los botones de editar y eliminar */
+.edit-button, .delete-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2em;
+    padding: 5px;
+    margin: 0 5px;
+}
+
+.edit-button {
+    color: #FFC107; /* Color ámbar para editar */
+}
+
+.delete-button {
+    color: #d32f2f; /* Rojo para eliminar */
+}
+
+.edit-button:hover, .delete-button:hover {
+    transform: scale(1.1); /* Aumentar tamaño ligeramente en hover */
+}
+
+/* Estilo para el formulario en formato horizontal */
+.employee-form {
+    border: 2px solid #FF5722; /* Borde naranja */
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #FFFFFF;
+    width: 100%;
+    max-width: 1150px; /* Aumento el ancho máximo a 1150px (más largo de los lados) */
+    display: flex;
+    flex-direction: row; /* Cambié a horizontal */
+    gap: 20px; /* Espacio entre los elementos */
+    justify-content: space-between; /* Justifica los elementos para tener espacio entre ellos */
+    flex-wrap: wrap; /* Permite que el formulario se ajuste en pantallas pequeñas */
+}
+
+/* Estilo para cada campo dentro del formulario */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    width: 45%; /* Hace que cada grupo ocupe el 45% del espacio */
+}
+
+.form-group label {
+    color: #FF5722; /* Naranja para las etiquetas */
+    font-size: 1em;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group select {
+    padding: 12px;
+    width: 100%; /* Los inputs ocupan todo el ancho disponible */
+    border: 1px solid #FF5722;
+    border-radius: 5px;
+    background-color: rgba(255, 235, 238, 0.1); /* Fondo claro para los inputs */
+    color: #FF5722; /* Naranja oscuro para el texto */
+    font-size: 1em;
+    box-sizing: border-box; /* Asegura que el padding no afecte el ancho */
+}
+
+/* Estilo para el botón de enviar */
+.submit-button {
+    padding: 12px 20px;
+    background-color: #FF5722;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 100%; /* Hace que el botón ocupe todo el ancho */
+    margin-top: 20px;
+}
+
+.submit-button:hover {
+    background-color: #FF7043; /* Naranja más claro en hover */
+}
+
+/* Estilo para el título del formulario con sombra */
+.employee-form h2 {
+    color: #FF5722; /* Naranja fuerte para el texto */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4); /* Sombra oscura para dar el efecto de profundidad */
+    font-size: 1.8em; /* Tamaño de fuente para el título */
+    margin-bottom: 15px; /* Separación entre el título y el formulario */
+    font-weight: bold; /* Hacer el texto en negrita */
+    text-align: center; /* Centrado del título */
+}
+
+/* Responsividad para pantallas pequeñas */
+@media (max-width: 767px) {
+    .employee-form {
+        flex-direction: column; /* Cambia la dirección a columna en pantallas pequeñas */
+        width: 100%;
+    }
+
+    .form-group {
+        width: 100%; /* Los campos ocupan el 100% del espacio en pantallas pequeñas */
+    }
+
+    .submit-button {
+        padding: 10px 15px;
+    }
+
+    .rut-filter-input {
+        width: 150px; /* Ancho más pequeño en móvil */
+    }
+
+    .rut-filter-button {
+        padding: 6px 12px; /* Ajusta el tamaño del botón */
+    }
+}

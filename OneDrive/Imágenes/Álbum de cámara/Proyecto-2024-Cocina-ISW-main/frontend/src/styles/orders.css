@@ -1,0 +1,211 @@
+/* Estilo básico para la página */
+.main-container {
+  padding: 200px;
+  font-family: Arial, sans-serif;
+  background-color: #795548; /* Color de fondo */
+  border-radius: 1px; /* Bordes redondeados para mayor suavidad */
+}
+
+/* Título */
+h1 {
+  text-align: center;
+  color: #FF5722;  /* Naranja */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Sombra de texto */
+  margin-bottom: 20px;
+}
+
+/* Estilo para el formulario de órdenes */
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;  /* Centrar verticalmente */
+  align-items: center;      /* Centrar horizontalmente */
+  margin: 20px 0;
+  padding: 20px;
+  border: 2px solid #FFC107;  /* Borde amarillo */
+  border-radius: 8px;         /* Bordes redondeados */
+  background-color: #FF5722;  /* Naranja */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);  /* Sombra suave para dar profundidad */
+  width: 100%;
+  max-width: 500px;           /* Máxima anchura para un mejor diseño en pantallas grandes */
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;     /* Asegura que padding y borde no afecten el ancho total */
+}
+
+/* Estilo de las etiquetas */
+label {
+  font-size: 1rem;
+  margin-bottom: 5px;
+  color: white;  /* Color blanco */
+  font-weight: bold;  /* Texto en negrita */
+  text-align: center;  /* Centrar las etiquetas */
+}
+
+/* Estilo para los campos de entrada y selección */
+input, select {
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  width: 100%;  /* Asegura que los campos de entrada ocupen todo el ancho disponible */
+  max-width: 100%;  /* Asegura que no sobrepasen el contenedor */
+  box-sizing: border-box; /* Ajusta el ancho total para incluir padding y bordes */
+  text-align: center;  /* Centrar el texto dentro de los campos */
+}
+
+/* Estilo para el botón de creación */
+input[type="submit"] {
+  background-color: #28a745;  /* Verde */
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  padding: 12px 0;
+  font-size: 1.1rem;
+  border-radius: 5px;
+  width: 100%;  /* El botón ocupará el ancho completo */
+  max-width: 100%;  /* No sobrepasará el ancho de su contenedor */
+  box-sizing: border-box; /* Para evitar que padding y bordes afecten el tamaño total */
+  margin-top: 10px; /* Un pequeño margen superior para separación */
+  transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+  background-color: #218838;
+}
+
+/* Estilo para los botones con emojis */
+.edit-button, .delete-button {
+  background-color: #FFEBEE;  /* Fondo suave */
+  border: 2px solid #FF5722;  /* Borde naranja */
+  border-radius: 8px;         /* Bordes redondeados */
+  padding: 8px 12px;          /* Espaciado interno para hacer los botones más grandes */
+  font-size: 1.5em;           /* Aumentar el tamaño de los emojis */
+  color: #FF5722;             /* Color del emoji */
+  cursor: pointer;
+  transition: all 0.3s ease;  /* Transición para el efecto hover */
+}
+
+.edit-button:hover, .delete-button:hover {
+  background-color: #FF5722;  /* Fondo naranja al pasar el cursor */
+  color: #FFFFFF;             /* Cambiar el color del emoji a blanco */
+  border-color: #FFC107;      /* Cambiar el borde a amarillo al pasar el cursor */
+}
+
+.edit-button:focus, .delete-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(255, 87, 34, 0.3); /* Sombra de foco para mejor visibilidad */
+}
+
+/* Estilo para la tabla de órdenes */
+table {
+  width: 70%;  /* Ajustar el ancho de la tabla (más estrecha) */
+  margin: 20px auto;  /* Centrar la tabla horizontalmente */
+  border-collapse: collapse;
+  border: 3px solid #FFC107;  /* Borde amarillo alrededor de toda la tabla */
+  font-size: 0.9rem;   /* Reducir el tamaño de la fuente */
+  table-layout: fixed; /* Asegurar que las columnas no se expandan más allá del límite */
+}
+
+th, td {
+  padding: 8px 12px;  /* Reducir el padding para que las celdas no sean tan grandes */
+  text-align: left;
+  border: 1px solid #FFC107;  /* Borde amarillo en todas las celdas */
+  font-size: 0.85rem;   /* Reducir el tamaño de la fuente */
+  word-wrap: break-word; /* Asegura que el texto largo se divida en varias líneas */
+}
+
+/* Cabeceras de la tabla */
+th {
+  background-color: #FF5722;  /* Naranja oscuro para las cabeceras */
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2); /* Sombra sutil en las cabeceras */
+}
+
+/* Filas de la tabla al pasar el mouse */
+tr:hover {
+  background-color: #b55d42;  /* Amarillo claro para el hover en las filas */
+}
+
+/* Estilo para la celda de las acciones (botones de edición/eliminación) */
+td .edit-button, td .delete-button {
+  font-size: 1.2rem;  /* Reducir el tamaño de los botones */
+  padding: 6px 10px;   /* Reducir el tamaño del padding en los botones */
+}
+
+/* Responsividad para la tabla en pantallas más pequeñas */
+@media (max-width: 768px) {
+  table {
+    font-size: 0.85rem;  /* Reducir el tamaño de la fuente para pantallas pequeñas */
+    width: 90%;  /* Asegurar que la tabla no sea demasiado ancha en pantallas pequeñas */
+  }
+
+  th, td {
+    padding: 6px 8px;  /* Reducir aún más el padding en pantallas pequeñas */
+  }
+}
+
+/* Estilo para el modal */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Contenido del modal */
+.modal-content {
+  background-color: white; /* Fondo blanco para el contenido */
+  padding: 20px;
+  border-radius: 8px; /* Bordes redondeados */
+  text-align: center;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Sombra para el modal */
+  max-width: 400px; /* Ancho máximo del modal */
+  width: 90%; /* Ancho relativo en pantallas pequeñas */
+}
+
+/* Texto del modal */
+.modal-content p {
+  font-size: 1rem;
+  color: black; /* Texto en negro */
+  margin-bottom: 20px;
+}
+
+/* Botones dentro del modal */
+.modal-content button {
+  padding: 10px 20px;
+  margin: 5px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Botón de confirmar */
+.modal-content .confirm-button {
+  background-color: #28a745; /* Verde */
+  color: white;
+}
+
+.modal-content .confirm-button:hover {
+  background-color: #218838;
+}
+
+/* Botón de cancelar */
+.modal-content .cancel-button {
+  background-color: #dc3545; /* Rojo */
+  color: white;
+}
+
+.modal-content .cancel-button:hover {
+  background-color: #c82333;
+}

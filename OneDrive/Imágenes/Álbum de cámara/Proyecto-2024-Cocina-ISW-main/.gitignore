@@ -1,0 +1,12 @@
+# Ignorar archivos y carpetas temporales y de caché
+.cache/
+.gitconfig
+.vscode/
+*.mp3
+*.mp4
+*.pdf
+Downloads/
+
+# Ignorar archivos del sistema operativo
+.DS_Store
+Thumbs.db
