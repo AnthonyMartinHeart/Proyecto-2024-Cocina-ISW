@@ -2,7 +2,9 @@
 
 # Arquitectura del Proyecto: Gestor de Bitácoras y Asistencia para Consultores
 1. Frontend (JavaScript)
-Tecnologías: React.js 
+Tecnologías: React.js
+
+
 
 Páginas Principales:
 
@@ -20,6 +22,8 @@ Autenticación: Implementar una autenticación JWT (JSON Web Token) para manejar
 Tecnologías: Node.js, Express.js, JWT (JSON Web Tokens), Bcrypt (para encriptar contraseñas)
 
 API RESTful:
+
+
 
 # Autenticación:
 
